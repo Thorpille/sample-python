@@ -17,9 +17,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         
         aa = "Coucou vous"
         
+        bb = aa + ' %s'
         
-        
-        msg = aa % (self.path)
+        msg = bb % (self.path)
         self.wfile.write(msg.encode())
 
 
